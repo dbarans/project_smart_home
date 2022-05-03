@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from message import MessageType
+from iot.message import MessageType
 
 
 class Device(ABC):

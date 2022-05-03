@@ -1,4 +1,4 @@
-from devices import SmartSpeaker, HueLight, Curtains
+from iot.devices import SmartSpeaker, HueLight, Curtains
 
 
 def collect_diagnostics(device) -> None:
