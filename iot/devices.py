@@ -16,3 +16,17 @@ class HueLight(Device):
         print("hue_light_status_ok")
 
 
+class SmartSpeaker(Device):
+    def connect(self) -> None:
+        print("Connecting Smart Speaker")
+
+    def disconnect(self) -> None:
+        print("Disconnecting Smart Speaker")
+
+    def send_message(self, message_type: MessageType, data: str):
+        print(f"Smart Speaker handling message of type {message_type.name} with data [{data}].")
+
+    def status_update(self) -> str:
+        print("Smart_Speaker_status_ok")
+
+
