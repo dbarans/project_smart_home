@@ -30,3 +30,15 @@ class SmartSpeaker(Device):
         print("Smart_Speaker_status_ok")
 
 
+class Curtains(Device):
+    def connect(self) -> None:
+        print("Connecting Curtains")
+
+    def disconnect(self) -> None:
+        print("Disconnecting Curtains")
+
+    def send_message(self, message_type: MessageType, data: str):
+        print(f"Curtains handling message of type {message_type.name} with data [{data}].")
+
+    def status_update(self) -> str:
+        print("Curtains_status_ok")
