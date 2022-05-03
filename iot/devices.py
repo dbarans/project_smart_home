@@ -13,7 +13,7 @@ class HueLight(Device):
         print(f"Hue Light handling message of type {message_type.name} with data [{data}].")
 
     def status_update(self) -> str:
-        print("hue_light_status_ok")
+        return "hue_light_status_ok"
 
 
 class SmartSpeaker(Device):
@@ -27,7 +27,7 @@ class SmartSpeaker(Device):
         print(f"Smart Speaker handling message of type {message_type.name} with data [{data}].")
 
     def status_update(self) -> str:
-        print("Smart_Speaker_status_ok")
+        return "Smart_Speaker_status_ok"
 
 
 class Curtains(Device):
@@ -41,4 +41,4 @@ class Curtains(Device):
         print(f"Curtains handling message of type {message_type.name} with data [{data}].")
 
     def status_update(self) -> str:
-        print("Curtains_status_ok")
+        return "Curtains_status_ok"
