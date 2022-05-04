@@ -1,8 +1,7 @@
 import random
 import string
 from iot.diagnostics import collect_diagnostics
-
-# from devices import *
+from iot.message import *
 
 
 def generate_id(length):
@@ -39,6 +38,11 @@ class IOTService:
 
     def run_program(self, message: list):
         print("=====RUNNING PROGRAM======")
+        for object in self.devices:
+            for message_object in message:
+                if object.device_id == message_object.device_id:
+                    object.send_message(message_object.msg_type, message_object.data)
+        print("=====END OF PROGRAM======")
 
     def test_devices(self):
         print("Start test devices")
